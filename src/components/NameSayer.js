@@ -1,8 +1,15 @@
 import React from 'react'
 
-export const NameSayer = (props) => {
+const NameSayer = ({nameToSay}) => {
+  const sayName = () => {
+    if (nameToSay.length > 0) {
+      return (<div>Your name is {nameToSay}.</div>)
+    }
+  }
+
   return (
-    <div>
-    </div>
+    <div>{sayName()}</div>
   )
 }
+
+export default NameSayer
