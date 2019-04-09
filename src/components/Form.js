@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
-import Input from './Input'
-import { NameSayer } from './NameSayer'
+import NameSayer from './NameSayer'
 
 class Form extends Component {
   state = { name: "" }
+
+  onSubmit = (e) => {
+    e.preventDefault()
+    console.log(e.target.elements)
+  }
+
   render() {
     return (
-      <form>
-        Name:
-        <input
-          className="self-end mh3 ph2 pv1 w5"
-          placeholder="<enter name...>"
-          name="name"
-          type="text"
-          />
+      <form className="flex flex-column" onSubmit={this.onSubmit}>
+        <NameSayer nameToSay={this.state.name} />
+        <input type="text" label="Name" name="name" />
         <input
           className="mv2 ph3 pv2 br3 bg-light-gray pointer"
           type="submit"
