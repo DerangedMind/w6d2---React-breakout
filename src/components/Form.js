@@ -13,7 +13,7 @@ class Form extends Component {
     return (
       <form className="flex flex-column" onSubmit={this.onSubmit}>
         <NameSayer nameToSay={this.state.name} />
-        <input type="text" label="Name" name="name" />
+        <input type="text" label="Name" name="name" placeholder="Your name..."/>
         <input
           className="mv2 ph3 pv2 br3 bg-light-gray pointer"
           type="submit"
