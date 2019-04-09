@@ -11,7 +11,7 @@ class Input extends Component {
           name={this.props.name}
           placeholder={this.props.placeholder ? this.props.placeholder : "..."}
           onChange={this.props.onChange}
-          value={this.props.alue}
+          value={this.props.value}
           />
       </div>
     )
